@@ -1,0 +1,279 @@
+
+
+body {
+	display: grid;
+	min-height: 98vh;
+	grid-template-rows: 1fr auto;
+    background-color: rgb(52, 78, 156);
+}
+
+.logo-alura{
+    position: absolute;
+    margin: 40px 50px;
+} 
+
+.img-alura{
+    width: 45px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 90px; 
+    flex-wrap: wrap;
+}
+
+.container-entrada{
+   background-color: rgb(52, 78, 156);   height: 750px;
+
+}
+
+.area-entrada{
+    width: 580px;
+    height: 530px;
+    resize: none;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+    border-radius: 18px;
+    padding: 15px;
+    border: none;
+    margin-top: 20px;
+    margin-left: 100px;
+    background-color: rgb(52, 78, 156);
+}
+
+textarea::placeholder{
+    color: white;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+
+.text-aclaracion{
+    display: flex;
+    margin: 15px 0;
+    margin-left: 40px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.container-button{
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+button{
+    width: 250px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: medium;
+    border: solid 0.5px #0A3871;
+}
+
+.button-e{
+   
+    background-color: #194d1c;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 19px;
+}
+.button-e:hover{
+    background-color: rgb(58, 111, 67);
+} 
+
+.button-d{
+    background-color: rgb(33, 137, 33);
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 19px;
+    
+}
+.button-d:hover{
+    background-color: rgb(85, 160, 85);
+}
+
+.button-f{
+    background-color: rgb(79, 60, 190);
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 19px;
+}
+.button-f:hover{
+    background-color: rgb(96, 79, 189);
+}
+
+.container-salida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 719px;
+    width: 350px;
+    border-radius: 18px;
+    text-align: center;
+    background-color: rgb(33, 33, 33)
+}
+
+.mensaje{
+    color: rgb(239, 101, 101);
+    font-size:35px;
+}
+
+.descripcion{
+    font-size:25px;
+  color: white;
+}
+
+.texto-salida{
+    margin-top: 10px;
+    width: 300px;
+    height: 550px;
+    border-radius: 15px;
+    border: none;
+    resize: none;
+    padding: 15px;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(33, 33, 33)
+    
+}
+
+section > div > img{
+    margin: 0 auto;
+    width: 300px;
+}
+
+section > div > img + p{padding: 0 50px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.btn-copiar-texto{
+    margin-bottom: 18px;
+}
+
+footer{
+    margin-bottom:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+    color: white;
+}
+
+@media screen and (max-width:1150px){
+    main{margin-top: 150px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-entrada{
+        width: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+
+     textarea{
+        width: 70%;
+        border: solid blueviolet;
+     }
+
+     .area-entrada{
+
+        height: 430px;
+        margin-right: 100px;
+
+    }
+
+    .container-salida{
+        height: 400px;
+        width: 690px;
+    }
+
+    .img-no-encontrado{
+        display: none;
+    }
+
+    .texto-salida{
+        width: 500px;
+    }
+
+    .button-f{
+        height: 80px;
+        border-radius: 14px;
+    }
+
+
+    footer{
+        margin: 30px 0;
+    }
+
+}
+
+@media screen and (max-width:730px){
+    footer{
+        height: 60px;
+        margin: 10px 0px;
+    }
+
+    .container-entrada{
+        width: 399px;
+     }
+
+    .area-entrada{
+        width: 360px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .text-aclaracion{
+        margin-left: 27px;
+    }
+
+    .container-button{  
+        width: 300px;
+    }
+
+     .buttons{
+        height: 160px;
+        flex-direction: column;
+        align-items: center;
+     } 
+
+     .container-salida{
+        height: 400px;
+        width: 380px;
+    }
+
+    .texto-salida{
+        width: 320px;
+    }
+    
+    }
+
+

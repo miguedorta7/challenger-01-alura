@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenger Encriptado</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+
+    <div class="logo-alura">
+      <img class="img-alura" src="./assets/img/aluraLogo2.png" alt="Alura logo" />
+    </div>
+
+      <main>
+        <section class="container-entrada">
+          <textarea id="textoEntrada" class="area-entrada" placeholder="Ingrese texto Aquí"></textarea>
+          <div class="container-button">
+            <div class="text-aclaracion">
+              <p> ! Sólo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="buttons">
+              <button id="encriptar" onclick="encriptar();" class="button-e">Encriptar</button>
+              <button id="desencriptar" class="button-d" onclick="desencriptado();">Desencriptar</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="container-salida">
+          <textarea class="texto-salida " id="salidaTexto" readonly></textarea>
+          <div id="NoEncontrado" class="no-encontrado">
+            <img class="img-no-encontrado" src="./assets/img/noEncontrado.png" alt />
+            <p class="mensaje" id="mensaje">Ningún mensaje fue encontrado!</p>
+            <p class="descripcion" id="descripcion">Ingresa el texto que deseas encriptar o desencriptar.</p>
+          </div> 
+        <button id="copiarTexto" class="button-f btn-copiar-texto" onclick="copiarPortapapeles();">Copiar</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Desarrolado por: Miguel Dorta</p>
+      <p>Alura Challenger-1, Febrero 2024</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
