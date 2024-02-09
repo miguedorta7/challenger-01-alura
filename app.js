@@ -7,6 +7,11 @@ const copiarTexto = document.getElementById("copiarTexto");
 copiarTexto.style.display = "none";
 salidaTexto.style.display = "none";
 
+function tieneMayusculas (texto){
+  const regex = /(?=.*?[A-Z])/;
+  return regex.test(texto);
+}
+
 function tieneCaracteresEspeciales(texto) {
   const regex = /[^\w\s]/;
   return regex.test(texto);
@@ -18,14 +23,14 @@ function tieneNumeros(texto) {
 }
 
 function encriptar() {
-  const textoEntrada = document.getElementById("textoEntrada").value.toLowerCase();
+  const textoEntrada = document.getElementById("textoEntrada").value;
 
   if (textoEntrada === "") {
     NoEncontrado.style.display = "block";
     copiarTexto.style.display = "none";
     salidaTexto.style.display = "none";
-  } else if (tieneCaracteresEspeciales(textoEntrada) || tieneNumeros(textoEntrada)) {
-    alert("No deben ser utilizados letras con acentos ni caracteres especiales.");
+  } else if (tieneCaracteresEspeciales(textoEntrada) || tieneNumeros(textoEntrada) || tieneMayusculas(textoEntrada)) {
+    alert("No esta permitido ingresar letras con mayúsculas, acentos, caracteres especiales, ni tampoco ingresar números.");
   } else {;
 
     const reemplazar = textoEntrada
@@ -49,8 +54,8 @@ function desencriptado() {
     NoEncontrado.style.display = "block";
     copiarTexto.style.display = "none";
     salidaTexto.style.display = "none";
-  } else if (tieneCaracteresEspeciales(textoSalida) || tieneNumeros(textoSalida)) {
-    alert("No deben ser utilizados letras con acentos ni caracteres especiales.");
+  } else if (tieneCaracteresEspeciales(textoSalida) || tieneNumeros(textoSalida) ||tieneMayusculas(textoEntrada)) {
+    alert("No esta permitido ingresar letras con mayúsculas, acentos, caracteres especiales, ni tampoco ingresar números.");
   } else {
  
 
