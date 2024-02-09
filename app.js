@@ -55,7 +55,7 @@ function desencriptado() {
     copiarTexto.style.display = "none";
     salidaTexto.style.display = "none";
   } else if (tieneCaracteresEspeciales(textoSalida) || tieneNumeros(textoSalida) || /[A-Z]/.test(textoSalida)) {
-    alert("No deben ser utilizadas letras con mayúsculas, acentos, caracteres especiales ni números.");
+    alert("No esta permitido ingresar letras con mayúsculas, acentos, caracteres especiales, ni tampoco ingresar números.");
   } else {
     const reemplazar = textoSalida
       .toLowerCase()
