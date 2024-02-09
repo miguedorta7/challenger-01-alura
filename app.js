@@ -25,7 +25,7 @@ function encriptar() {
     copiarTexto.style.display = "none";
     salidaTexto.style.display = "none";
   } else if (tieneCaracteresEspeciales(textoEntrada) || tieneNumeros(textoEntrada)) {
-    alert("No deben ser utilizados letras con acentos, caracteres especiales ni números.");
+    alert("No deben ser utilizados letras con acentos ni caracteres especiales.");
   } else {;
 
     const reemplazar = textoEntrada
@@ -50,7 +50,7 @@ function desencriptado() {
     copiarTexto.style.display = "none";
     salidaTexto.style.display = "none";
   } else if (tieneCaracteresEspeciales(textoSalida) || tieneNumeros(textoSalida)) {
-    alert("No deben ser utilizados letras con acentos, caracteres especiales ni números.");
+    alert("No deben ser utilizados letras con acentos ni caracteres especiales.");
   } else {
  
 
@@ -69,11 +69,8 @@ function desencriptado() {
 }
 
 function copiarPortapapeles() {
-  let copyText = document.getElementById("salidaTexto");
-  copyText.select();
+  let copiarTexto = document.getElementById("salidaTexto");
+  copiarTexto.select();
   document.execCommand("copy");
-  document
-    .querySelector("#salidaTexto")
-    .addEventListener("click", copiarPortapapeles);
   textoEntrada.value = "";
 }

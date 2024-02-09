@@ -1,10 +1,13 @@
-
+*{
+    font-family: sans-serif;
+}
 
 body {
 	display: grid;
 	min-height: 98vh;
 	grid-template-rows: 1fr auto;
     background-color: rgb(52, 78, 156);
+
 }
 
 .logo-alura{
@@ -54,12 +57,20 @@ textarea:focus{
 }
 
 
+
 .text-aclaracion{
     display: flex;
+    text-align: start;
     margin: 15px 0;
-    margin-left: 40px;
-    flex-wrap: wrap;
     color: white;
+    padding-left: 30px;
+    align-items: center;
+}
+
+.img-exclamacion{
+    width: 15px;
+    margin-bottom: 2px;
+    padding-right: 5px;
 }
 
 .container-button{
@@ -87,18 +98,18 @@ button{
 
 .button-e{
    
-    background-color: #194d1c;
+    background-color: #d34124;
     color: white;
     cursor: pointer;
     border: none;
     font-size: 19px;
 }
 .button-e:hover{
-    background-color: rgb(58, 111, 67);
+    background-color: #f14e2d;
 } 
 
 .button-d{
-    background-color: rgb(33, 137, 33);
+    background-color: #b23f3f;
     color: white;
     cursor: pointer;
     border: none;
@@ -106,18 +117,18 @@ button{
     
 }
 .button-d:hover{
-    background-color: rgb(85, 160, 85);
+    background-color: #d44d4d;
 }
 
 .button-f{
-    background-color: rgb(79, 60, 190);
+    background-color: rgb(57, 41, 148);
     color: white;
     cursor: pointer;
     border: none;
     font-size: 19px;
 }
 .button-f:hover{
-    background-color: rgb(96, 79, 189);
+    background-color: rgb(79, 61, 182);
 }
 
 .container-salida{
@@ -129,17 +140,17 @@ button{
     width: 350px;
     border-radius: 18px;
     text-align: center;
-    background-color: rgb(33, 33, 33)
+    background-color: rgb(245, 239, 239);
 }
 
 .mensaje{
-    color: rgb(239, 101, 101);
-    font-size:35px;
+    color: rgb(246, 81, 81);
+    font-size:31px;
 }
 
 .descripcion{
     font-size:25px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .texto-salida{
@@ -152,10 +163,12 @@ button{
     padding: 15px;
     font-weight: 400;
     font-size: 25px;
-    color: white;
-    background-color: rgb(33, 33, 33)
+    color: rgb(0, 0, 0);
+    background-color: rgb(245, 239, 239);
     
 }
+
+
 
 section > div > img{
     margin: 0 auto;
@@ -222,6 +235,10 @@ footer{
         width: 500px;
     }
 
+    .mensaje{
+        font-size:43px;
+    }
+
     .button-f{
         height: 80px;
         border-radius: 14px;
@@ -252,7 +269,9 @@ footer{
     }
 
     .text-aclaracion{
-        margin-left: 27px;
+        text-align: center;
+        padding-left: 0px;
+        justify-content: center;
     }
 
     .container-button{  
