@@ -48,18 +48,17 @@ function encriptar() {
 }
 
 function desencriptado() {
-  const textoSalida = document.getElementById("textoEntrada").value.toLowerCase();
+  const textoSalida = document.getElementById("textoEntrada").value;
 
   if (textoSalida === "") {
     NoEncontrado.style.display = "block";
     copiarTexto.style.display = "none";
     salidaTexto.style.display = "none";
-  } else if (tieneCaracteresEspeciales(textoSalida) || tieneNumeros(textoSalida) ||tieneMayusculas(textoEntrada)) {
-    alert("No esta permitido ingresar letras con mayúsculas, acentos, caracteres especiales, ni tampoco ingresar números.");
+  } else if (tieneCaracteresEspeciales(textoSalida) || tieneNumeros(textoSalida) || /[A-Z]/.test(textoSalida)) {
+    alert("No deben ser utilizadas letras con mayúsculas, acentos, caracteres especiales ni números.");
   } else {
- 
-
     const reemplazar = textoSalida
+      .toLowerCase()
       .replace(/enter/g, "e")
       .replace(/imes/g, "i")
       .replace(/ai/g, "a")
@@ -79,3 +78,5 @@ function copiarPortapapeles() {
   document.execCommand("copy");
   textoEntrada.value = "";
 }
+
+
